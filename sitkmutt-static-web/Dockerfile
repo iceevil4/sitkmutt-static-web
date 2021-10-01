@@ -1,10 +1,7 @@
 FROM nginx:1.21.3-alpine
 
-WORKDIR /usr/src/app/
+WORKDIR /usr/share/nginx/html
 
-COPY src/ /usr/src/app/
-RUN npm install
+COPY src/ /usr/share/nginx/html
 
 EXPOSE 8080
-
-CMD ["nginx", "/usr/src/app/radiance/index.html", "8080"]
