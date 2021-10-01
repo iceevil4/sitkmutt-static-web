@@ -1,0 +1,5 @@
+web:
+  build: .
+  image: ghcr.io/iceevil4/static-web:dev
+  ports:
+    - "8080:8080"
